@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\program files (x86)\microsoft visual studio 10.0\vc\include\codeanalysis\sourceannotations.h(78): warning C4467: ATL 屬性用法已被取代
+  glut32.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\HW1\HW1_partA\Debug\glut32.exe
+  glut32.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\HW1\HW1_partA\Debug\glut32.pdb (Full PDB)
