@@ -37,7 +37,7 @@ void Display1(void)
 	glClear(GL_COLOR_BUFFER_BIT);
 	glPushMatrix();
 	
-	Penguin a(0.5,0.5,0);
+	Penguin a(0.0,0.0,0);
 	//a.Body();
 	//Creat_Penguin(a);
 	//PenguinInit(a);
