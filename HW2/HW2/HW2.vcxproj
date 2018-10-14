@@ -113,14 +113,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BouncingPolygons.cpp" />
+    <ClCompile Include="Draw.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="ShowImg.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BouncingPolygons.h" />
+    <ClInclude Include="Draw.h" />
     <ClInclude Include="Global_parameter.h" />
-    <ClInclude Include="ShowImg.h" />
+    <ClInclude Include="main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
