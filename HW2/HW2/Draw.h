@@ -1,4 +1,5 @@
 #pragma once
+#ifndef _DRAW_H_
 
 #include <Windows.h>
 #include <glut.h>
@@ -9,15 +10,20 @@ class Penguin
 {
 public:
 
-	Penguin(float x,float y,float z);
+	Penguin(Angle angle, float x,float y,float z);
 
 	void Move(float x, float y, float z);
 	void Body();
-	void Wing();
+	void Wing(int angle);
 	void Head();
-	void LeftLeg();
-	void Mouth();
+	void LeftLeg(int angle);
+	void Mouth(int angle);
 	void Eye();
-	void RightLeg();
+	void RightLeg(int angle);
+	void GreenPoint(float x, float y, float z);
+	void Angle(float angle,float x,float y,float z);
 
 };
+
+Angle aAngle = { 0 };
+#endif // !_DRAW_H_

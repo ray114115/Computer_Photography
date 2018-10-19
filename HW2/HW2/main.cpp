@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	
 	glutDisplayFunc(Display1);  // ©I¥s¨ç¼Æ 
 
-	//glutTimerFunc(33, timerFunction, 1.0);
+	glutTimerFunc(33, timerFunction, 1.0);
 	glutKeyboardFunc(keyboard); //Áä½L
 	glutMotionFunc(rotateFourpart); //·Æ¹«
 	
@@ -37,14 +37,9 @@ void Display1(void)
 	glClear(GL_COLOR_BUFFER_BIT);
 	glPushMatrix();
 	
-	Penguin a(0.0,0.0,0);
-	//a.Body();
-	//Creat_Penguin(a);
-	//PenguinInit(a);
 	
-	//a.head();
-	//a.leg();
-	//draw_penguin();
+
+	Penguin a(aAngle,aMove.x,aMove.y,aMove.z);
 	
 	glPopMatrix();
 	glutSwapBuffers();
@@ -53,7 +48,9 @@ void Display1(void)
 
 void timerFunction(int p)
 {
-	//angle += 10;
+	aMove.x = moveing(aMove.x);
+	//a.angle = rotating(a.angle);
+
 	glutPostRedisplay();
 	glutTimerFunc(33, timerFunction, 1.0);
 
@@ -168,6 +165,36 @@ void rotateFourpart(int x, int y)
 	glutPostRedisplay();
 	//} 
 	*/
+}
+
+int rotating(int angle)
+{
+	if (aFlag.Rotate == 0)
+		angle += 1;
+	else
+		angle -= 1;
+	if (angle > 40)
+		aFlag.Rotate = 1;
+	else if (angle < -40)
+		aFlag.Rotate = 0;
+	return angle;
+}
+
+float moveing(float x)
+{
+	if (aFlag.Move == 0)
+	{
+		x += 0.01;
+	}
+	else
+	{
+		x -= 0.01;
+	}
+	if (x > 0.5)
+		aFlag.Move = 1;
+	else if (x < -0.5)
+		aFlag.Move = 0;
+	return x;
 }
 
 
