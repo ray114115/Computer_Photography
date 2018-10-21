@@ -23,7 +23,8 @@ float moveing(float x);
 int rotating(int angle);
 
 int flag = 0;
-MoveA aMove = { 0 };
+MoveA aMove = { 0.5,0.5,0 };
 Flag aFlag = { 0 };
+Angle aAngle = { 0,30,0,0,0,0 };
 
 #endif // !_MAIN_H_

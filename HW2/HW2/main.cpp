@@ -2,13 +2,62 @@
 #include "Global_parameter.h"
 #include "main.h"
 
+class openGL_window : public Fl_Gl_Window { // Create a OpenGL class in FLTK 
+	void draw();            // Draw function. 
+	//void draw_overlay();    // Draw overlay function. 
 
+public:
+	openGL_window(int x, int y, int w, int h, const char *l = 0);  // Class constructor 
+	int frame;
 
+};
+
+openGL_window::openGL_window(int x, int y, int w, int h, const char *l) :Fl_Gl_Window(x, y, w, h, l)
+{
+	mode(FL_RGB | FL_ALPHA | FL_DOUBLE | FL_STENCIL);
+	//Fl::add_timeout(1.0 / 24.0, Timer_CB, (void*)this);
+	frame = 0;
+}
+
+void openGL_window::draw() {
+	// the valid() property may be used to avoid reinitializing your
+	// GL transformation for each redraw:
+	if (!valid()) {
+		valid(1);
+		glLoadIdentity();
+		glViewport(0, 0, w(), h());
+	}
+
+	// draw an amazing but slow graphic:--------------
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	glBegin(GL_QUADS);
+	glColor3f(1, 0, 0); glVertex2f(-1, -1);
+	glColor3f(1, 1, 0); glVertex2f(-1, 1);
+	glColor3f(1, 0, 1); glVertex2f(1, 1);
+	glColor3f(1, 1, 1); glVertex2f(1, -1);
+	glEnd();
+
+	//--------------------------------------------------
+	++frame;
+}
 
 int main(int argc, char *argv[])
 {
+	/*
+	Fl_Window window(640, 480);  // Create a FLTK window. Resolution 600*400. 
 
+	openGL_window test(10, 10, 600, 400);
+	window.resizable(&test);
 
+	window.end();                  // End of FLTK windows setting. 
+	window.show(argc, argv);        // Show the FLTK window
+	test.show();
+	test.redraw_overlay();
+
+	return Fl::run();
+	*/
+	
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE);
 
@@ -27,6 +76,7 @@ int main(int argc, char *argv[])
 
 	glutMainLoop();
 	return 0;
+	
 }
 
 void Display1(void)
@@ -37,9 +87,15 @@ void Display1(void)
 	glClear(GL_COLOR_BUFFER_BIT);
 	glPushMatrix();
 	
+
+	Penguin a(aAngle,aMove);
+	//a.Body();
+	//Creat_Penguin(a);
+	//PenguinInit(a);
+
 	
 
-	Penguin a(aAngle,aMove.x,aMove.y,aMove.z);
+	//Penguin aPenguin(aAngle,aMove.x,aMove.y,aMove.z);
 	
 	glPopMatrix();
 	glutSwapBuffers();
@@ -51,7 +107,7 @@ void timerFunction(int p)
 	aMove.x = moveing(aMove.x);
 	//a.angle = rotating(a.angle);
 
-	glutPostRedisplay();
+	//glutPostRedisplay();
 	glutTimerFunc(33, timerFunction, 1.0);
 
 }

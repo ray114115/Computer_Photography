@@ -1,5 +1,6 @@
 #pragma once
 
+
 #ifndef  _GLOBAL_PARAMETER_H_
 
 
@@ -13,14 +14,7 @@
 #define PENGUIN_FOOT (PENGUIN_LEG * 0.5)
 #define PENGUIN_POINT 0.01
 
-typedef struct
-{
-	int angle;
-	float x;
-	float y;
-	float z;
 
-} MoveA;
 
 typedef struct
 {
@@ -37,6 +31,15 @@ typedef struct
 	int leftfoot;
 	int wing;
 }Angle;
+
+typedef struct
+{
+	float x;
+	float y;
+	float z;
+
+} MoveA;
+
 
 //BouncingPolygons *mygl_1;
 
