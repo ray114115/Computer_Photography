@@ -120,8 +120,6 @@ void choice1_cb(Fl_Widget *o, void *p)   // choice callback function
 	{
 	case 0:
 		aAngle = { 0,0,0,0,0,0 };
-		aMove = { 0.5,0.5,0,0 };
-		aColor = { float(0.3),float(0.3),float(0.3) };
 		aFlag.Auto = 1;
 		break;
 	case 1:
