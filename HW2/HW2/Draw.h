@@ -10,7 +10,8 @@ class Penguin
 public:
 	Angle angle;
 	MoveA move;
-	Penguin(Angle angleinput, MoveA moveinput);
+	Color acolor;
+	Penguin(Angle angleinput, MoveA moveinput,Color colorinput);
 
 	void Move();
 	void Draw();
