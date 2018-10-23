@@ -8,10 +8,14 @@
 class Penguin
 {
 public:
+	Angle angle;
+	MoveA move;
+	Color acolor;
+	Penguin(Angle angleinput, MoveA moveinput,Color colorinput);
 
-	Penguin(float x,float y,float z);
+	void Move();
+	void Draw();
 
-	void Move(float x, float y, float z);
 	void Body();
 	void Wing();
 	void Head();

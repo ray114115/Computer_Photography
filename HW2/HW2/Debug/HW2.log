@@ -1,4 +1,4 @@
-﻿cl : 命令列 warning D9028: 最少重建失敗，還原成一般建置
-  Draw.cpp
+﻿  main.cpp
+c:\users\user\desktop\lab\course\計算攝影學\hw\computer_photography\hw2\hw2\main.h(30): warning C4838: 從 'double' 到 'float' 的轉換必須是縮小轉換
   HW2.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\Computer_Photography\HW2\Debug\HW2.exe
   HW2.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\Computer_Photography\HW2\Debug\HW2.pdb (Partial PDB)
