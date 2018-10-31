@@ -31,6 +31,7 @@ public:
 	float ball_degree2;
 	float ball_degree3;
 	float ball_x,ball_z;
+	
 	int see;
 	bool shoot;
 
@@ -44,6 +45,10 @@ public:
 
 
 	float tank_z,tank_x,tank_degree,tank_degree2,tank_degree3;
+
+	/*дїио*/
+	float train_x, train_y, train_z,train_degree;
+
 
 
 
@@ -65,9 +70,7 @@ public:
 
 
 	void xyz(void);
-	void tank(void);
-	void tank2(void);
-	void tank3(void);
+	
 	void ball(void);
 
 	void train(void);
