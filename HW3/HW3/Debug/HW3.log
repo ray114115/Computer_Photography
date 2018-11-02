@@ -1,2 +1,6 @@
-﻿  HW3.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\Computer_Photography\HW3\Debug\HW3.exe
+﻿  BouncingPolygons.cpp
+c:\users\user\desktop\lab\course\計算攝影學\hw\computer_photography\hw3\hw3\bouncingpolygons.h(10): warning C4067: 未預期的語彙基元，接著前置處理器指示詞 - 必須是新行
+c:\users\user\desktop\lab\course\計算攝影學\hw\computer_photography\hw3\hw3\bouncingpolygons.cpp(128): warning C4477: 'printf' : 格式字串 '%d' 需要 'int' 類型的引數，但 variadic 引數 1 的類型為 'double'
+c:\users\user\desktop\lab\course\計算攝影學\hw\computer_photography\hw3\hw3\bouncingpolygons.cpp(128): warning C4477: 'printf' : 格式字串 '%d' 需要 'int' 類型的引數，但 variadic 引數 2 的類型為 'double'
+  HW3.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\Computer_Photography\HW3\Debug\HW3.exe
   HW3.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\Computer_Photography\HW3\Debug\HW3.pdb (Full PDB)
