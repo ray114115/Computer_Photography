@@ -1,11 +1,12 @@
-
 #include <iostream>
 #include <fstream>
 #include "SMFLoader.h"
+
 using namespace std;
 
 SMFLoader::SMFLoader()
 {
+	tmp = new float[9];
 	vertex = NULL;
 	face = NULL;
 	color = NULL;
@@ -169,12 +170,8 @@ float* SMFLoader::getColors()
 
 float* SMFLoader::getFace(int index)
 {
-	float* tmp;
-
 	if (index >= faceSize)
 		return NULL;
-
-	tmp = new float[9];
 
 	int v = face[index * 3] - 1;
 
