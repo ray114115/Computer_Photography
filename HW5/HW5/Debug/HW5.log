@@ -1,0 +1,6 @@
+﻿  main.cpp
+c:\users\user\desktop\tmp\artoolkit\include\ar\ar.h : warning C4819: 檔案含有無法在目前字碼頁 (950) 中表示的字元。請以 Unicode 格式儲存檔案以防止資料遺失
+c:\users\user\desktop\lab\course\計算攝影學\hw\computer_photography\hw5\hw5\main.cpp(254): warning C4838: 從 'double' 到 'GLfloat' 的轉換必須是縮小轉換
+c:\users\user\desktop\lab\course\計算攝影學\hw\computer_photography\hw5\hw5\main.cpp(255): warning C4838: 從 'double' 到 'GLfloat' 的轉換必須是縮小轉換
+  HW5.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\Computer_Photography\HW5\Debug\HW5.exe
+  HW5.vcxproj -> C:\Users\User\Desktop\lab\course\計算攝影學\HW\Computer_Photography\HW5\Debug\HW5.pdb (Partial PDB)
